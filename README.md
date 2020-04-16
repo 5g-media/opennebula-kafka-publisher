@@ -1,4 +1,4 @@
-# *opennebula-kafka-publisher* service
+# *Opennebula-kafka-publisher* service
 
 ## Introduction
 This service is responsible to:
@@ -16,7 +16,7 @@ Actually, this service feeds the [MAPE](https://github.com/5g-media/mape) with m
 Check the `settings.py` file:
  - *KAFKA_SERVER*: defines the kafka bus *host* and *port*.
  - *KAFKA_CLIENT_ID*: The default value is 'opennebula-kafka-publisher'.
- - *KAFKA_API_VERSION*:The version of the Kafka bus. The default is `(1, 1, 0)`.
+ - *KAFKA_API_VERSION*:The version of the Kafka bus. The default is `(1, 1, 0)`
  - *KAFKA_OPENNEBULA_TOPIC*: defines the topic in which you want to send the messages. The default topic name is `nfvi.tid-onlife.opennebula`.
  - *KAFKA_TRAFFIC_MANAGER_TOPIC*: defines the topic in which the Traffic Manager VM metrics are sent. The default topic name is `trafficmanager.uc2.metrics`.
  - *OSM_IP*: defines the IP of the OSM
