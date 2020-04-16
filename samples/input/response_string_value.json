@@ -1,0 +1,172 @@
+{
+  "VM": {
+    "ID": "1004",
+    "UID": "19",
+    "GID": "105",
+    "UNAME": "francesco",
+    "GNAME": "5GMedia",
+    "NAME": "5GMediaMonitoring",
+    "PERMISSIONS": {
+      "OWNER_U": "1",
+      "OWNER_M": "1",
+      "OWNER_A": "0",
+      "GROUP_U": "0",
+      "GROUP_M": "0",
+      "GROUP_A": "0",
+      "OTHER_U": "0",
+      "OTHER_M": "0",
+      "OTHER_A": "0"
+    },
+    "LAST_POLL": "1553812825",
+    "STATE": "3",
+    "LCM_STATE": "3",
+    "PREV_STATE": "3",
+    "PREV_LCM_STATE": "3",
+    "RESCHED": "0",
+    "STIME": "1551698603",
+    "ETIME": "0",
+    "DEPLOY_ID": "one-1004",
+    "MONITORING": {
+      "CPU": "0.0",
+      "DISKRDBYTES": "349236528",
+      "DISKRDIOPS": "54146",
+      "DISKWRBYTES": "1797288960",
+      "DISKWRIOPS": "16714",
+      "DISK_SIZE": [
+        {
+          "ID": "0",
+          "SIZE": "1390"
+        },
+        {
+          "ID": "1",
+          "SIZE": "1"
+        }
+      ],
+      "MEMORY": "673188",
+      "NETRX": "4817774426",
+      "NETTX": "648",
+      "STATE": "a"
+    },
+    "TEMPLATE": {
+      "AUTOMATIC_DS_REQUIREMENTS": "(\"CLUSTERS/ID\" @> 0 | \"CLUSTERS/ID\" @> 100 | \"CLUSTERS/ID\" @> 101)",
+      "AUTOMATIC_REQUIREMENTS": "(CLUSTER_ID = 0 | CLUSTER_ID = 100 | CLUSTER_ID = 101) & !(PUBLIC_CLOUD = YES)",
+      "CONTEXT": {
+        "DISK_ID": "1",
+        "ETH0_CONTEXT_FORCE_IPV4": null,
+        "ETH0_DNS": null,
+        "ETH0_GATEWAY": null,
+        "ETH0_GATEWAY6": null,
+        "ETH0_IP": "10.50.0.0",
+        "ETH0_IP6": null,
+        "ETH0_IP6_PREFIX_LENGTH": null,
+        "ETH0_IP6_ULA": null,
+        "ETH0_MAC": "06:00:0a:32:00:00",
+        "ETH0_MASK": null,
+        "ETH0_MTU": null,
+        "ETH0_NETWORK": null,
+        "ETH0_SEARCH_DOMAIN": null,
+        "ETH0_VLAN_ID": null,
+        "ETH0_VROUTER_IP": null,
+        "ETH0_VROUTER_IP6": null,
+        "ETH0_VROUTER_MANAGEMENT": null,
+        "NETWORK": "YES",
+        "SSH_PUBLIC_KEY": null,
+        "TARGET": "hdb"
+      },
+      "CPU": "1",
+      "DISK": {
+        "ALLOW_ORPHANS": "NO",
+        "CLONE": "YES",
+        "CLONE_TARGET": "SYSTEM",
+        "CLUSTER_ID": "0,100,101",
+        "DATASTORE": "default",
+        "DATASTORE_ID": "1",
+        "DEV_PREFIX": "hd",
+        "DISK_ID": "0",
+        "DISK_SNAPSHOT_TOTAL_SIZE": "0",
+        "DISK_TYPE": "FILE",
+        "DRIVER": "qcow2",
+        "IMAGE": "5GMedia_ubuntu_16.04",
+        "IMAGE_ID": "58",
+        "IMAGE_STATE": "2",
+        "IMAGE_UNAME": "francesco",
+        "LN_TARGET": "NONE",
+        "ORIGINAL_SIZE": "2252",
+        "READONLY": "NO",
+        "SAVE": "NO",
+        "SIZE": "10240",
+        "SOURCE": "/var/lib/one//datastores/1/09a4a32fa0ff6c5e5ef553e63ee338e4",
+        "TARGET": "hda",
+        "TM_MAD": "shared",
+        "TYPE": "FILE"
+      },
+      "GRAPHICS": {
+        "LISTEN": "0.0.0.0",
+        "PORT": "6904",
+        "TYPE": "VNC"
+      },
+      "MEMORY": "1024",
+      "NIC": {
+        "AR_ID": "0",
+        "BRIDGE": "br_mgmt",
+        "CLUSTER_ID": "0,100,101",
+        "IP": "10.50.0.0",
+        "MAC": "06:00:0a:32:00:00",
+        "NETWORK": "5GMedia",
+        "NETWORK_ID": "45",
+        "NIC_ID": "0",
+        "SECURITY_GROUPS": "0,142",
+        "TARGET": "one-1004-0",
+        "VN_MAD": "bridge"
+      },
+      "OS": {
+        "BOOT": null
+      },
+      "SECURITY_GROUP_RULE": [
+        {
+          "PROTOCOL": "ALL",
+          "RULE_TYPE": "outbound",
+          "SECURITY_GROUP_ID": "142",
+          "SECURITY_GROUP_NAME": "5gmedia_mgmt"
+        },
+        {
+          "PROTOCOL": "ALL",
+          "RULE_TYPE": "inbound",
+          "SECURITY_GROUP_ID": "142",
+          "SECURITY_GROUP_NAME": "5gmedia_mgmt"
+        }
+      ],
+      "TEMPLATE_ID": "92",
+      "VCPU": "1",
+      "VMID": "1004"
+    },
+    "USER_TEMPLATE": {
+      "INPUTS_ORDER": null,
+      "MEMORY_UNIT_COST": "MB"
+    },
+    "HISTORY_RECORDS": {
+      "HISTORY": {
+        "OID": "1004",
+        "SEQ": "0",
+        "HOSTNAME": "boe-oln-cn-01",
+        "HID": "0",
+        "CID": "100",
+        "STIME": "1551698632",
+        "ETIME": "0",
+        "VM_MAD": "kvm",
+        "TM_MAD": "shared",
+        "DS_ID": "0",
+        "PSTIME": "1551698632",
+        "PETIME": "1551698642",
+        "RSTIME": "1551698642",
+        "RETIME": "0",
+        "ESTIME": "0",
+        "EETIME": "0",
+        "ACTION": "0",
+        "UID": "-1",
+        "GID": "-1",
+        "REQUEST_ID": "-1"
+      }
+    }
+  }
+}
