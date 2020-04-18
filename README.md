@@ -9,9 +9,12 @@ Actually, this service feeds the [MAPE](https://github.com/5g-media/mape) with m
 
 ## Requirements
 - Python version 3.5+
-- The Apache Kafka broker must be accessible from the service
+- The publish/subscribe broker (Apache Kafka) must be accessible from the service
 - The [OSM](https://osm.etsi.org/) (release 5) must be accessible from the service
-- The OpenNebula XML-RPC API must be accessible from the service
+- The [OpenNebula XML-RPC API](https://docs.opennebula.io/5.10/integration/system_interfaces/api.html) must be accessible from the service
+
+The required python packages are depicted in the `requirements.txt` file. 
+
 
 ## Configuration
 
@@ -29,7 +32,7 @@ A variety of variables are defined in the `settings.py`  file. The configuration
 | XML_RPC_SERVER | The host and port of the OpenNebula XML-RPC API |
 | XML_RPC_SESSION | The username and password that allows access in the  OpenNebula XML-RPC API |
 | SCHEDULER_MINUTES | How frequent the publisher collects the monitoring data through the OpenNebula XML-RPC API and publishes them in the pub/sub broker. Default value is `1` minute. | 
-| NO_OSM_VM_IDS | The Virtual Machine IDs (hosted in OpenNebula) from which the service will collect monitoring data. By default, this service collects monitoring data ONLY for the VMs that have been deployed through the OSM. Therefore, this parameter allows you to monitor VMs that haven't deployed through OSM. The value must be string, comma delimeted: e.g. "1002,678,1345" |
+| NO_OSM_VM_IDS | By default, this service collects monitoring data ONLY for the VMs that have been deployed through the OSM. Therefore, this parameter allows you to monitor Virtual Machines that haven't deployed through OSM. The value must be string, comma delimeted where each ID maps to the VM id: e.g. "1002,678,1345" |
  
  ## Installation/Deployment
 
